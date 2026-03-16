@@ -1,0 +1,36 @@
+class Personne {
+
+    String cin;
+    String nom;
+    String prenom;
+    String email;
+    int age;
+
+    void initialiser(String c, String n, String p, String e, int a) {
+        cin = c;
+        nom = n;
+        prenom = p;
+        email = e;
+        age = a;
+    }
+
+    void afficherPersonne() {
+        System.out.println("CIN : " + cin);
+        System.out.println("Nom : " + nom);
+        System.out.println("Prenom : " + prenom);
+        System.out.println("Email : " + email);
+        System.out.println("Age : " + age);
+    }
+}
+
+public class Exercice1 {
+
+    public static void main(String[] args) {
+
+        Personne p = new Personne();
+
+        p.initialiser("CD456", "Samir", "Youssef", "samir@mail.com", 25);
+
+        p.afficherPersonne();
+    }
+}
