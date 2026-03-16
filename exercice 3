@@ -1,0 +1,32 @@
+class Point {
+
+    String nomPoint;
+    double abscisse;
+
+    Point(String nom, double x) {
+        nomPoint = nom;
+        abscisse = x;
+    }
+
+    void afficher() {
+        System.out.println("Le point " + nomPoint + " est a : " + abscisse);
+    }
+
+    void translate(double v) {
+        abscisse = abscisse + v;
+    }
+}
+
+public class Exercice3 {
+
+    public static void main(String[] args) {
+
+        Point p = new Point("P", 10.5);
+
+        p.afficher();
+
+        p.translate(4.3);
+
+        p.afficher();
+    }
+}
