@@ -1,0 +1,42 @@
+class Point {
+
+    char nomPoint;
+    double abscisse;
+
+    void initialiser(char nom, double x) {
+        nomPoint = nom;
+        abscisse = x;
+    }
+
+    void initialiser(Point p) {
+        nomPoint = p.nomPoint;
+        abscisse = p.abscisse;
+    }
+
+    void afficher() {
+        System.out.println("Point " + nomPoint + " : " + abscisse);
+    }
+
+    void translate(double v) {
+        abscisse = abscisse + v;
+    }
+}
+
+public class Exercice2 {
+
+    public static void main(String[] args) {
+
+        Point p1 = new Point();
+
+        p1.initialiser('B', 5.8);
+        p1.afficher();
+
+        p1.translate(-2);
+        p1.afficher();
+
+        Point p2 = new Point();
+        p2.initialiser(p1);
+
+        p2.afficher();
+    }
+}
