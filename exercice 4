@@ -1,0 +1,16 @@
+public class Exercice4 {
+
+    public static void main(String[] args) {
+
+        Livre l1 = new Livre("Algorithmique", "Hassan", 320);
+        Livre l2 = new Livre("Programmation Java", "Nadia", 280, 90);
+
+        Etagere e = new Etagere(4);
+
+        e.ajouter(l1);
+        e.ajouter(l2);
+
+        System.out.println(e.getLivre(1));
+        System.out.println(e.getLivre(2));
+    }
+}
